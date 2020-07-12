@@ -1,9 +1,9 @@
-import { ProduitsModel } from '../models/produit'
+import { CommandeModel } from '../models/commande'
 
 export class PanierModel {
     id: number;
-    prods: ProduitsModel[];
-    quantite: number;
+    commandes: CommandeModel[];
+    prixTotale: number;
 
     constructor() {}
 }

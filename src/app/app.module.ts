@@ -7,12 +7,14 @@ import { FormsModule } from '@angular/forms';
 import { GestionProduitComponent } from './components/gestion-produit/gestion-produit.component';
 import { GestionPanierComponent } from './components/gestion-panier/gestion-panier.component';
 import { APP_BASE_HREF } from '@angular/common';
+import { GestionCommandeComponent } from './components/gestion-commande/gestion-commande.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GestionProduitComponent,
-    GestionPanierComponent
+    GestionPanierComponent,
+    GestionCommandeComponent
   ],
   imports: [
     BrowserModule,
