@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ProduitService } from 'src/app/services/produit.service';
 import { ProduitsModel } from 'src/app/models/produit';
 import { PanierModel } from 'src/app/models/panier';
-import { ProduitService } from 'src/app/services/produit.service';
 import { PanierService } from 'src/app/services/panier.service';
 import { CommandeService } from 'src/app/services/commande.service';
 import { CommandeModel } from 'src/app/models/commande';
@@ -13,6 +13,9 @@ import { CommandeModel } from 'src/app/models/commande';
 })
 export class GestionProduitComponent implements OnInit {
 
+
+  @Output() refresh = new EventEmitter<boolean>();
+
   prodsList: ProduitsModel[] = [];
   nom: string; 
   prod: ProduitsModel = new ProduitsModel();
@@ -23,17 +26,13 @@ export class GestionProduitComponent implements OnInit {
               private servicePanier: PanierService){}
 
   ngOnInit() {
-    this.prodsList = [];
-    this.service.getProduits().subscribe(posts => {
-      this.prodsList = posts;
-      console.log(posts);
-    });
+    
   }  
 
   addProduit() {
-    console.log(this.prod, this.nom)
+    this.prod.prix = +this.prod.prix;
     this.service.postProds(this.prod).subscribe(result => {
-      this.ngOnInit();
+      this.refresh.emit(true);
     });
   }
 
@@ -62,7 +61,7 @@ export class GestionProduitComponent implements OnInit {
       if (cmd !== undefined) {
         cmd.quantite = cmd.quantite + 1;
         cmd.dateCommande = new Date();
-        cmd.prixCommande = +(cmd.prixCommande + produit.prix);
+        cmd.prixCommande = cmd.prixCommande + produit.prix;
         this.serviceCommande.updateCommande(cmd).subscribe(rslt => {
           alert("Commande passer avec succee");
         })

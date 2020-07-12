@@ -1,22 +1,19 @@
-<table>
-    <tr>
-      <th>ID</th>
-      <th>nom</th>
-      <th>prix</th>
-      <th>quantite</th>
-    </tr>
-    <tr *ngFor="let p of prodsList" (click)="getProduit(p)">
-      <td>{{p.id}}</td>
-      <td>{{p.nom}}</td>
-      <td>{{p.prix}}</td>
-      <td>{{p.quantite}}</td>
-      <td><button (click)="deleteProduit(p.id)">Supprimer</button></td>
-      <td><button (click)="addProdToCommande(p)">passer une commande</button></td>
-    </tr>
-  </table>
-  <label>Nom</label><input type="text" [(ngModel)]="prod.nom" name="nom"><br>
-  <label>Prix</label><input type="text" [(ngModel)]="prod.prix" name="prix"><br>
-  <label>Quantité</label><input type="number" [(ngModel)]="prod.quantite" name="quantite"><br>
-  <button (click)="addProduit()">Save</button>
-  <button (click)="editProduit()">Edit</button><br>
-  <a routerLink="/panier" routerLinkActive="active">Go to panier</a>
+<h2>Ajout Produit</h2>
+<br>
+<div class="col col-lg-12">
+  <div class="row">
+    <div class="col col-lg-3">
+      <label class="label">Nom:&nbsp;</label><input class="input" type="text" [(ngModel)]="prod.nom" name="nom">
+    </div>
+    <div class="col col-lg-3">
+      <label class="label">Prix:&nbsp;</label><input class="input" type="text" [(ngModel)]="prod.prix" name="prix">
+    </div>
+    <div class="col col-lg-3">
+      <label class="label">Quantité:&nbsp;</label><input class="input" type="number" [(ngModel)]="prod.quantite" name="quantite">
+    </div>
+    <div class="col col-lg-3">
+      <button class="btn btn-success" (click)="addProduit()">Ajouter le produit</button>
+    </div>
+  </div>
+</div>
+<hr>

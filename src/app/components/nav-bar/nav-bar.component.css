@@ -1,0 +1,35 @@
+ul {
+    padding: 10px 10px 35px 10px;
+    text-align: center;
+    height: 35px;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    width: 25%;
+    float: left;
+    color: white;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-top: -14px;
+  }
+  
+  li a:hover {
+    background-color: #111;
+    cursor: pointer;
+  }
+
+  nav {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+  }

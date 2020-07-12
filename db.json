@@ -2,21 +2,38 @@
   "produits": [
     {
       "id": 1,
+      "image": "nouveauP.jpg",
       "nom": "dabouza",
       "prix": 2.3,
       "quantite": 5
     },
     {
       "nom": "kahwaaa",
-      "prix": "5.2",
+      "image": "nouveauP.jpg",
+      "prix": 5.2,
       "quantite": 2,
       "id": 2
     },
     {
-      "nom": "gazouza",
-      "prix": "1.5",
-      "quantite": 3,
-      "id": 3
+      "nom": "citronade",
+      "image": "nouveauP.jpg",
+      "prix": 3,
+      "quantite": 6,
+      "id": 4
+    },
+    {
+      "nom": "coka",
+      "image": "nouveauP.jpg",
+      "prix": 2.4,
+      "quantite": 8,
+      "id": 5
+    },
+    {
+      "image": "nouveauP.jpg",
+      "nom": "Café",
+      "prix": 1.2,
+      "quantite": 7,
+      "id": 6
     }
   ],
   "panier": {
@@ -25,7 +42,7 @@
   },
   "commande": [
     {
-      "dateCommande": "2020-07-12T16:07:34.641Z",
+      "dateCommande": "2020-07-12T16:25:35.957Z",
       "prixCommande": 4.6,
       "prod": {
         "id": 1,
@@ -35,6 +52,30 @@
       },
       "quantite": 2,
       "id": 1
+    },
+    {
+      "dateCommande": "2020-07-12T16:25:59.993Z",
+      "prixCommande": 3,
+      "prod": {
+        "nom": "gazouza",
+        "prix": 1.5,
+        "quantite": 3,
+        "id": 3
+      },
+      "quantite": 2,
+      "id": 2
+    },
+    {
+      "dateCommande": "2020-07-12T16:26:27.488Z",
+      "prixCommande": 10.4,
+      "prod": {
+        "nom": "kahwaaa",
+        "prix": 5.2,
+        "quantite": 2,
+        "id": 2
+      },
+      "quantite": 2,
+      "id": 3
     }
   ]
 }

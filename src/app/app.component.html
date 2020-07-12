@@ -1,2 +1,5 @@
-<app-gestion-produit></app-gestion-produit>
-<app-gestion-panier></app-gestion-panier>
+<app-nav-bar (actions)="navBarSelection($event)"></app-nav-bar>
+<div class="produit-body">
+    <app-gestion-produit *ngIf="showGestionProd"></app-gestion-produit>
+    <app-produit></app-produit>
+</div>

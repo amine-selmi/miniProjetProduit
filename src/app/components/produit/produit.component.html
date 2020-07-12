@@ -1,0 +1,17 @@
+
+<h2>Liste des produit</h2>
+    <div class="col col-lg-12">
+      <div class="row">
+        <div *ngFor="let p of prodsList" class="col col-lg-3-custom">
+          <h3>{{p.nom}}</h3>
+          <div class="col col-lg-12">
+            <img src="../../../assets/img/{{p.image}}">
+          </div>
+          <div class="col col-lg-12" style="padding: 13px;">
+            <div style="float: left;"><label class="label">PRIX:&nbsp;</label>{{p.prix}} €</div>
+            <div style="float: right;"><label class="label">QUANTITE:&nbsp;</label>{{p.quantite}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+

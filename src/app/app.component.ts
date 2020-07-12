@@ -11,6 +11,15 @@ import { PanierService } from './services/panier.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  showGestionProd = false;
  
-  
+  navBarSelection(event) {
+    if (event === 1) {
+      this.showGestionProd = true;
+    } else {
+      this.showGestionProd = false;
+    }
+  }
+
 }

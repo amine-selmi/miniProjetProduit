@@ -8,13 +8,17 @@ import { GestionProduitComponent } from './components/gestion-produit/gestion-pr
 import { GestionPanierComponent } from './components/gestion-panier/gestion-panier.component';
 import { APP_BASE_HREF } from '@angular/common';
 import { GestionCommandeComponent } from './components/gestion-commande/gestion-commande.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { ProduitComponent } from './components/produit/produit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GestionProduitComponent,
     GestionPanierComponent,
-    GestionCommandeComponent
+    GestionCommandeComponent,
+    NavBarComponent,
+    ProduitComponent
   ],
   imports: [
     BrowserModule,
