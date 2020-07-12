@@ -1,0 +1,23 @@
+<table>
+    <tr>
+      <th>ID</th>
+      <th>nom</th>
+      <th>prix</th>
+      <th>quantite</th>
+    </tr>
+    <tr *ngFor="let p of prodsList" (click)="getProduit(p)">
+      <td>{{p.id}}</td>
+      <td>{{p.nom}}</td>
+      <td>{{p.prix}}</td>
+      <td>{{p.quantite}}</td>
+      <td><button (click)="deleteProduit(p.id)">Supprimer</button></td>
+      <td><button (click)="addProdPanier(p)">ajouter au panier</button></td>
+  
+    </tr>
+  </table>
+  <label>Nom</label><input type="text" [(ngModel)]="prod.nom" name="nom"><br>
+  <label>Prix</label><input type="text" [(ngModel)]="prod.prix" name="prix"><br>
+  <label>Quantité</label><input type="number" [(ngModel)]="prod.quantite" name="quantite"><br>
+  <button (click)="addProduit()">Save</button>
+  <button (click)="editProduit()">Edit</button><br>
+  <a routerLink="/panier" routerLinkActive="active">Go to panier</a>
