@@ -19,7 +19,11 @@ export class PanierService {
   }
 
   editPanier(panier: PanierModel): Observable<PanierModel> {
-    return this.http.put<PanierModel>('http://localhost:3000/panier', panier);
+    return this.http.put<PanierModel>('http://localhost:3000/panier/' + panier.id, panier);
+  }
+
+  postPanier(panier: PanierModel): Observable<PanierModel> {
+    return this.http.post<PanierModel>('http://localhost:3000/panier', panier);
   }
 
 

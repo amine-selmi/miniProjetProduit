@@ -21,25 +21,7 @@
   ],
   "panier": {
     "id": 1,
-    "prods": [
-      {
-        "id": 1,
-        "nom": "dabouza",
-        "prix": 2.3,
-        "quantite": 10
-      },
-      {
-        "nom": "kahwaaa",
-        "prix": "5.2",
-        "quantite": 3,
-        "id": 2
-      },
-      {
-        "nom": "gazouza",
-        "prix": "1.5",
-        "quantite": 4,
-        "id": 3
-      }
-    ]
-  }
+    "prods": []
+  },
+  "commande": []
 }
