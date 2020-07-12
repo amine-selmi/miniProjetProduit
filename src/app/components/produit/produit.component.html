@@ -11,7 +11,12 @@
             <div style="float: left;"><label class="label">PRIX:&nbsp;</label>{{p.prix}} €</div>
             <div style="float: right;"><label class="label">QUANTITE:&nbsp;</label>{{p.quantite}}</div>
           </div>
+          <div class="col col-lg-12">
+              <button class="btn btn-primary" (click)="editProduit(p)" style="float: left;">Edit</button>
+              <button class="btn btn-info" style="float: right;">Commander</button>
+              <br><button class="btn btn-danger" (click)="deleteProd(p.id)" 
+              style="width: 100%; margin-top: 5px;">Supprimer</button>
+          </div>
         </div>
       </div>
     </div>
-

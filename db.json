@@ -8,13 +8,6 @@
       "quantite": 5
     },
     {
-      "nom": "kahwaaa",
-      "image": "nouveauP.jpg",
-      "prix": 5.2,
-      "quantite": 2,
-      "id": 2
-    },
-    {
       "nom": "citronade",
       "image": "nouveauP.jpg",
       "prix": 3,
@@ -22,18 +15,32 @@
       "id": 4
     },
     {
-      "nom": "coka",
-      "image": "nouveauP.jpg",
-      "prix": 2.4,
-      "quantite": 8,
-      "id": 5
-    },
-    {
       "image": "nouveauP.jpg",
       "nom": "Café",
       "prix": 1.2,
       "quantite": 7,
       "id": 6
+    },
+    {
+      "image": "nouveauP.jpg",
+      "nom": "Goublet",
+      "prix": 0.2,
+      "quantite": 100,
+      "id": 7
+    },
+    {
+      "image": "nouveauP.jpg",
+      "nom": "Sucre",
+      "prix": 0.9,
+      "quantite": 20,
+      "id": 8
+    },
+    {
+      "image": "nouveauP.jpg",
+      "nom": "Lunette",
+      "prix": 300,
+      "quantite": 5,
+      "id": 9
     }
   ],
   "panier": {
