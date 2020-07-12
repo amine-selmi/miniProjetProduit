@@ -13,7 +13,7 @@
           </div>
           <div class="col col-lg-12">
               <button class="btn btn-primary" (click)="editProduit(p)" style="float: left;">Edit</button>
-              <button class="btn btn-info" style="float: right;">Commander</button>
+              <button [disabled]="p.quantite === 0" class="btn btn-info" style="float: right;" (click)="addProdToCommande(p)">Commander</button>
               <br><button class="btn btn-danger" (click)="deleteProd(p.id)" 
               style="width: 100%; margin-top: 5px;">Supprimer</button>
           </div>

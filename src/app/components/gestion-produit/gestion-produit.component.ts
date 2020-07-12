@@ -56,12 +56,6 @@ export class GestionProduitComponent implements OnInit, OnChanges {
     this.prod = produit;
   }
 
-  deleteProduit(id) {
-    this.service.deleteProd(id).subscribe(() => {
-      alert("Suppersion effectue avec succee");
-      this.ngOnInit();
-    });
-  }
   
   editProduit() {
     this.service.editProd(this.prod).subscribe(() => {
@@ -69,43 +63,5 @@ export class GestionProduitComponent implements OnInit, OnChanges {
       this.refresh.emit(true);
     })
   }
-
-  addProdToCommande(produit: ProduitsModel) {
-    this.serviceCommande.getCommande().subscribe(commds => {
-      var cmd = commds.filter(x => x.prod.id === produit.id)[0];
-      if (cmd !== undefined) {
-        cmd.quantite = cmd.quantite + 1;
-        cmd.dateCommande = new Date();
-        cmd.prixCommande = cmd.prixCommande + produit.prix;
-        this.serviceCommande.updateCommande(cmd).subscribe(rslt => {
-          alert("Commande passer avec succee");
-        })
-      } else {
-        var commd: CommandeModel = new CommandeModel();
-        commd.dateCommande = new Date();
-        commd.prixCommande = +produit.prix;
-        commd.prod = produit;
-        commd.quantite = 1;
-        this.serviceCommande.addCommande(commd).subscribe(() => {
-          alert("Commande passer avec succee");
-        });
-      }
-    });
-  }
-
-  /*addProdPanier(produit: ProduitsModel) {
-    this.panier.id = 1;
-    this.servicePanier.getPanier().subscribe(panier => {
-      this.listProds = panier.prods;
-      this.listProds.push(produit);
-      this.panier.prods = this.listProds;
-      this.servicePanier.editPanier(this.panier).subscribe(result => {
-        produit.quantite = produit.quantite - 1;
-        this.service.editProd(produit).subscribe(() => {
-          alert("Produit " + produit.nom + " ajouter au panier");
-        })
-      });
-    });
-  }*/
 
 }

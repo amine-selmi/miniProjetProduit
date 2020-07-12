@@ -25,21 +25,21 @@
       "image": "nouveauP.jpg",
       "nom": "Goublet",
       "prix": 0.2,
-      "quantite": 100,
+      "quantite": 97,
       "id": 7
     },
     {
       "image": "nouveauP.jpg",
       "nom": "Sucre",
       "prix": 0.9,
-      "quantite": 20,
+      "quantite": 0,
       "id": 8
     },
     {
       "image": "nouveauP.jpg",
       "nom": "Lunette",
       "prix": 300,
-      "quantite": 5,
+      "quantite": 8,
       "id": 9
     }
   ],
@@ -49,39 +49,29 @@
   },
   "commande": [
     {
-      "dateCommande": "2020-07-12T16:25:35.957Z",
-      "prixCommande": 4.6,
+      "dateCommande": "2020-07-12T21:30:52.519Z",
+      "prixCommande": 0.2,
       "prod": {
-        "id": 1,
-        "nom": "dabouza",
-        "prix": 2.3,
-        "quantite": 5
+        "image": "nouveauP.jpg",
+        "nom": "Goublet",
+        "prix": 0.2,
+        "quantite": 97,
+        "id": 7
       },
-      "quantite": 2,
-      "id": 1
-    },
-    {
-      "dateCommande": "2020-07-12T16:25:59.993Z",
-      "prixCommande": 3,
-      "prod": {
-        "nom": "gazouza",
-        "prix": 1.5,
-        "quantite": 3,
-        "id": 3
-      },
-      "quantite": 2,
+      "quantite": 1,
       "id": 2
     },
     {
-      "dateCommande": "2020-07-12T16:26:27.488Z",
-      "prixCommande": 10.4,
+      "dateCommande": "2020-07-12T21:55:40.967Z",
+      "prixCommande": 0.9,
       "prod": {
-        "nom": "kahwaaa",
-        "prix": 5.2,
-        "quantite": 2,
-        "id": 2
+        "image": "nouveauP.jpg",
+        "nom": "Sucre",
+        "prix": 0.9,
+        "quantite": 0,
+        "id": 8
       },
-      "quantite": 2,
+      "quantite": 1,
       "id": 3
     }
   ]

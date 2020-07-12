@@ -1,1 +1,25 @@
-<p>gestion-commande works!</p>
+<hr>
+<h2>Liste des Commandes</h2>
+<table border="1">
+    <tr style="background-color: antiquewhite; height: 50px;">
+        <th>ID Commande</th>
+        <th>Nom Produit</th>
+        <th>Quantité</th>
+        <th>Date Commande</th>
+        <th>Prix Produit</th>
+        <th>Prix Commande</th>
+        <th>Supprimer</th>
+    </tr>
+    <tr *ngFor="let c of commandes" style="height: 38px;">
+        <td>{{c.id}}</td>
+        <td>{{c.prod.nom}}</td>
+        <td>{{c.quantite}}</td>
+        <td>{{c.dateCommande | date:'dd-MM-yyyy'}}</td>
+        <td>{{c.prod.prix}}</td>
+        <td>{{c.prixCommande}}</td>
+        <td><a href="javascript:void(0)" (click)="deleteCommande(c.id)">Supprimer</a></td>
+    </tr>
+</table>
+<div style="float: right;">
+    <h4>PrixTotale : {{prixTotale}} €</h4>
+</div>

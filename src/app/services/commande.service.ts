@@ -50,6 +50,6 @@ export class CommandeService {
    * @param idCommande supprimer une commande
    */
   deleteCommande(idCommande: number) {
-    return this.http.delete('http://localhost:3000/commande' + idCommande);
+    return this.http.delete('http://localhost:3000/commande/' + idCommande);
   }
 }

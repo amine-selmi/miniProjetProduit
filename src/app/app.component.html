@@ -1,5 +1,6 @@
 <app-nav-bar (actions)="navBarSelection($event)"></app-nav-bar>
 <div class="produit-body">
     <app-gestion-produit *ngIf="showGestionProd" [produit]="produit" (refresh)="refresh($event)"></app-gestion-produit>
-    <app-produit (prod)="getProd($event)" [refreshListe]="refreshListe"></app-produit>
+    <app-produit (prod)="getProd($event)" (refreshCom)="refreshCom($event)" [refreshListe]="refreshListe"></app-produit>
+    <app-gestion-commande *ngIf="showCommande" [refreshComm]="refreshComm"></app-gestion-commande>
 </div>

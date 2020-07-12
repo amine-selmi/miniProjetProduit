@@ -10,17 +10,28 @@ import { PanierService } from './services/panier.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   showGestionProd = false;
+  showCommande = false;
   refreshListe = false;
+  refreshComm = false;
   produit: ProduitsModel;
+
+  ngOnInit(): void {
+    this.showCommande = false;
+    this.showGestionProd = false;
+  }
  
   navBarSelection(event) {
     console.log("Nav bar selection",event)
     if (event === 1) {
       this.showGestionProd = true;
+    }
+    else if (event === 2) {
+      this.showCommande = true;
     } else {
+      this.showCommande = false;
       this.showGestionProd = false;
     }
   }
@@ -35,6 +46,13 @@ export class AppComponent {
   getProd(event) {
     this.showGestionProd = true;
     this.produit = event;
+  }
+
+  refreshCom(event) {
+    this.refreshComm = false;
+    if(event) {
+      this.refreshComm = true;
+    }
   }
 
 }
